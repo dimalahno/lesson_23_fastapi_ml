@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>VGG19 Image Classification</title>
+</head>
+<body>
+<h2>Классификация изображения</h2>
+<form action="/predict" method="post">
+    <label for="image_url">Ссылка на изображение:</label><br/>
+    <input type="text" id="image_url" name="image_url" size="50" placeholder="Введите URL"/><br/><br/>
+
+    <label for="model_choice">Выберите модель:</label><br/>
+    <select id="model_choice" name="model_choice">
+        <option value="vgg19">VGG19</option>
+        <option value="resnet50">ResNet50</option>
+        <option value="both">Обе</option>
+    </select><br/><br/>
+
+    <label for="top_n">Сколько top-N предсказаний выводить:</label><br/>
+    <input type="number" id="top_n" name="top_n" min="1" max="10" value="3"/><br/><br/>
+
+    <button type="submit">Отправить</button>
+</form>
+</body>
+</html>
